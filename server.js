@@ -33,7 +33,7 @@ MongoClient.connect("mongodb+srv://stitches:stitches@cluster0.w8k01.mongodb.net/
   {
     $set: {
       name: req.body.name,
-      type: req.body.quote
+      type: req.body.type
     }
   },
   {
