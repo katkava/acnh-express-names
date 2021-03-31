@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const MongoClient = require("mongodb").MongoClient
+const PORT = 3000
 
 // Our middleware
 app.set ("view engine", "ejs")
@@ -67,6 +68,6 @@ MongoClient.connect("mongodb+srv://stitches:stitches@cluster0.w8k01.mongodb.net/
 }) 
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || PORT, function() {
  console.log('listening on 3000')
 })
